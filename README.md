@@ -1,3 +1,6 @@
+
+## compile ,test and deploy move contract 
+
 ### Compile the Contract
 aptos move compile --dev
 
@@ -27,4 +30,12 @@ aptos move upgrade-object-package \
    --named-addresses my_addrx=$CONTRACT_OBJECT_ADDR \
    --profile $PUBLISHER_PROFILE \
    --assume-yes
+
+
+
+## frontend
+
+pnpm i 
+pnpm dev
+
 
