@@ -1,8 +1,8 @@
-export const project = `Meowtos`;
+export const project = `Rinifi`;
 export const explorerUrl = "https://explorer.aptoslabs.com" 
-export const discordLink = "https://discord.gg/tFQMPWSQ5z";
-export const twitterLnk ="https://x.com/Meowtos";
-export const telegramLink = "https://t.me/meowaptos"
+export const discordLink = "https://discord.gg/Nw63TSQj";
+export const twitterLnk ="https://x.com/";
+export const telegramLink = "https://t.me/"
 export const menu =[
     {
         name: "Home",
@@ -40,17 +40,29 @@ export const footerLinks = [
         path: "#faq"
     }
 ]
+
+//todo: add github prof
 export const team = [
+    
     {
-        name: "Sen7e",
-        github: "https://github.com/ajaythxkur",
+        name: "Dinesh",
+        github: "https://github.com/dinxsh",
+        profile: '/media/nfts/1.jpeg'
+    },
+    {
+        name: "raveesh",
+        github: "https://github.com/",
+        profile: '/media/nfts/1.jpeg'
+    },{
+        name: "aaron vernekar",
+        github: "https://github.com/aaronvern",
         profile: '/media/nfts/10.jpeg'
     },
     {
-        name: "Devil",
-        github: "https://github.com/Devil02070",
+        name: "rayvego",
+        github: "https://github.com/",
         profile: '/media/nfts/1.jpeg'
-    }
+    },
 ];
 
 export const faq = [
@@ -96,51 +108,5 @@ export const working = [
     {
         heading: "Default Option",
         description: "If you choose not to repay the loan, the NFT is transferred to the lender. There's no risk of additional fees or credit score impact—only the ownership of your NFT is transferred to settle the loan."
-    }
-]
-
-export const chooseUs =[
-    {
-        sr_no: '01',
-        title: 'Secure NFT Lending',
-        // imgurl: '/media/nfts/2.jpeg',
-        imgurl: '/Black-2-2.webp',
-        imgurl_active: '/Black-2-2.png',
-        description: 'We ensure top-notch security for both NFT owners and lenders, leveraging the Aptos blockchain to safeguard all transactions.',
-    },
-    {
-        sr_no: '02',
-        title: 'Fast & Low-Cost Deals',
-        imgurl: '/Black-6.webp',
-        imgurl_active: '/Black-6.png',
-        description: 'Enjoy minimal gas fees and rapid transactions on Aptos, delivering a smooth and cost-effective lending experience.',
-    },
-    {
-        sr_no: '03',
-        title: 'Verified Smart Contracts',
-        imgurl: '/Black-4-1.webp',
-        imgurl_active: '/Black-4-1.png',
-        description: 'Our platform uses transparent smart contracts that ensure fairness, trust, and complete verification in every lending process.',
-    },
-    {
-        sr_no: '04',
-        title: 'Community-Driven',
-        imgurl: '/Black-5.webp',
-        imgurl_active: '/Black-5.png',
-        description: 'We engage actively with our community to drive innovation, ensuring the platform evolves to meet users’ growing needs.',
-    },
-    {
-        sr_no: '05',
-        title: 'Flexible Loan Options',
-        imgurl: '/Black-7.webp',
-        imgurl_active: '/Black-7.png',
-        description: 'Flexible lending terms empower users to customize loan agreements, maximizing the potential value of their digital assets.',
-    },
-    {
-        sr_no: '06',
-        title: 'Trustless & Decentralized',
-        imgurl: '/Black-8.webp',
-        imgurl_active: '/Black-8.png',
-        description: 'Our decentralized lending platform eliminates intermediaries, guaranteeing full control of your assets throughout the process.',
     }
 ]

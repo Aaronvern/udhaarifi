@@ -43,7 +43,7 @@ function Banner() {
           <div className="col-lg-6 d-none d-lg-block">
             <div className="hero-image">
               <Image 
-                src="/media/nfts/1.jpeg" 
+                src="/media/nfts/3.jpg" 
                 alt="Featured NFT"
                 width={400}
                 height={400}

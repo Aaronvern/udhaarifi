@@ -31,8 +31,8 @@ export default function LendLayout({ children }: { children: React.ReactNode }) 
     return (
         <React.Fragment>
             <InnerParticlesComponent id="particles-bg" />
-            <div className="mt-32"> {/* Added large top margin container */}
-                <section className="pt-16 pb-12 bg-transparent">
+            <div> 
+                <section className={`inner-banner ${theme == 'light' ? 'light-theme' : 'dark-theme'}`}>
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center">
                             <h2 className="text-3xl font-bold mb-6 text-gold">
