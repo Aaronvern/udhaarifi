@@ -7,7 +7,7 @@ authors = ["aaronvern"]
 my_addrx="_"
 
 [dev-addresses]
-my_addrx="0x725b679826d8dcd9df9e6ec83a27951ae5a62c284731c0400c48511e8649c6fa"
+my_addrx="0x72bd11ccba38f1702ab3806628bab9568bc14815bcfa964319670834a539c419"
 
 [dependencies]
 AptosFramework = { git = "https://github.com/aptos-labs/aptos-framework.git", subdir = "aptos-framework", rev = "mainnet" }

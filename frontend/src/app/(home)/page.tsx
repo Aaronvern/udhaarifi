@@ -1,52 +1,86 @@
 import React from "react";
-import Link from "next/link";
 import { ParticlesComponent } from "./ReactParticles";
-import { HowItWorks } from "./HowItWorks";
-import { WhyChooseUs } from "./WhyChooseUs";
-import { Faqs } from "./Faqs";
 import { project } from "@/utils/constants";
+import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: `Home - ${project}`,
   description: `Homepage of ${project}`
 }
+
 export default function Home() {
   return (
     <React.Fragment>
       <ParticlesComponent id="particles-bg" />
       <Banner />
-      <HowItWorks />
-      <WhyChooseUs />
-      <Faqs />
+      <Features />
     </React.Fragment>
   );
 }
 
 function Banner() {
-  const faces = ["front", "back", "right", "left", "top", "bottom"];
   return (
     <section className="banner">
       <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-8 col-lg-8 banner-content p-0">
-            <h1>Unlock NFT Value with Instant Crypto Loans</h1>
-            <p className="pt-3">Turn your NFTs into collateral and access cryptocurrency loans with ease. No need to sell—just lend your NFTs and get the liquidity you need in minutes.</p>
-            <Link href={"/borrow/assets"}>
-              <button className="banner-btn mt-4">Get a loan now</button>
-            </Link>
-            <Link href={"/lend/assets"}>
-              <button className="banner-btn mt-4 ms-4 lend-btn">I want to lend</button>
-            </Link>
-          </div>
-          <div className="col-12 col-sm-4 col-lg-4 moving p-0">
-            <div className="scene">
-              <div className="cube">
-                {
-                  faces.map((face, idx) => (
-                    <div className={`face ${face}`} key={`face-${idx}`}></div>
-                  ))
-                }
+        <div className="row align-items-center">
+          <div className="col-lg-6">
+            <div className="hero-content">
+              <h1 className="hero-title">Borrow & Lend Against Your NFTs</h1>
+              <p className="hero-subtitle">
+                Access instant liquidity by using your NFTs as collateral, or earn yields by providing loans to borrowers.
+              </p>
+              <div className="hero-buttons">
+                <Link href="/borrow/assets">
+                  <button className="btn-primary me-3">Get a loan</button>
+                </Link>
+                <Link href="/lend/assets">
+                  <button className="btn-secondary">Start lending</button>
+                </Link>
               </div>
+            </div>
+          </div>
+          <div className="col-lg-6 d-none d-lg-block">
+            <div className="hero-image">
+              <Image 
+                src="/media/nfts/1.jpeg" 
+                alt="Featured NFT"
+                width={400}
+                height={400}
+                className="floating-nft"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Features() {
+  return (
+    <section className="features">
+      <div className="container">
+        <div className="row g-4">
+          <div className="col-md-4">
+            <div className="feature-card">
+              <div className="feature-icon">🔒</div>
+              <h3>Secure Lending</h3>
+              <p>Your NFTs are safely stored in smart contracts until loan repayment</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="feature-card">
+              <div className="feature-icon">⚡</div>
+              <h3>Instant Liquidity</h3>
+              <p>Get immediate access to funds without selling your NFTs</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="feature-card">
+              <div className="feature-icon">💰</div>
+              <h3>Earn Yields</h3>
+              <p>Provide loans and earn attractive returns on your crypto</p>
             </div>
           </div>
         </div>

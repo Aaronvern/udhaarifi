@@ -6,6 +6,10 @@ import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import { useTheme } from "@/context/themecontext";
 import { useKeylessAccounts } from "@/core/useKeylessAccounts";
 import {InnerParticlesComponent} from '@/components/Particles'
+import { FaWallet } from "react-icons/fa";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { MdOutlineLocalOffer } from "react-icons/md";
+
 export default function BorrowLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const { activeAccount } = useKeylessAccounts()
@@ -14,15 +18,18 @@ export default function BorrowLayout({ children }: { children: React.ReactNode }
     const paths = [
         {
             name: "My Assets",
-            to: "assets"
+            to: "assets",
+            icon: <FaWallet size={18} />
         },
         {
             name: "My Loans",
-            to: "loans"
+            to: "loans", 
+            icon: <IoDocumentTextOutline size={20} />
         },
         {
-            name: "Offers Received",
-            to: "offers"
+            name: "Offers",
+            to: "offers",
+            icon: <MdOutlineLocalOffer size={20} />
         }
     ]
     return (
@@ -42,41 +49,17 @@ export default function BorrowLayout({ children }: { children: React.ReactNode }
                 <div className="container">
                     <div className="row">
                         <div className="col d-flex box-main">
-                            {/* <div className="nav flex-column nav-pills me-4 tab-btns" id="borrow-tabs" role="tablist" aria-orientation="vertical">
-                                {
-                                    paths.map((path, index) => (
-                                        <Link href={`/borrow/${path.to}`} className={`tab-btn ${pathname === `/borrow/${path.to}` ? "active" : ""}`} key={`borrow-path-${index}`} scroll={false}>{path.name}</Link>
-                                    ))
-                                }
-                            </div>
-                            <div className="tab-content rounded" id="borrow-tabs-tabContent">
-                                {
-                                    paths.map((path, index) => (
-                                        <div key={`borrow-content-${index}`} className={`tab-pane fade ${pathname === `/borrow/${path.to}` ? "show active" : ""}`} id={`borrow-${path.to}`} role="tabpanel" aria-labelledby={`borrow-${path}`}>
-                                            {
-                                                connected ? (
-                                                    children
-                                                ) : (
-                                                    <div className="cn-wallet text-center w-50 m-auto rounded">
-                                                        <h3>Connect Your Wallet First</h3>
-                                                        {isLoading ? (
-                                                            <button className="connect-btn mt-3 rounded">Connecting...</button>
-                                                        ) : (
-                                                            <button className="connect-btn mt-3 rounded" data-bs-toggle="modal" data-bs-target="#connectmodal">Connect wallet</button>
-                                                        )
-
-                                                        }
-                                                    </div>
-                                                )
-                                            }
-                                        </div>
-                                    ))
-                                }
-                            </div> */}
                             <div className="nav flex-column nav-pills me-4 tab-btns rounded" id="borrow-tabs" role="tablist" aria-orientation="vertical">
                                 {
                                     paths.map((path, index) => (
-                                        <Link href={`/borrow/${path.to}`} className={`tab-btn ${pathname === `/borrow/${path.to}` ? "active" : ""}`} key={`borrow-path-${index}`} scroll={false}>{path.name}</Link>
+                                        <Link
+                                            href={`/borrow/${path.to}`}
+                                            key={path.to}
+                                            className={`tab-btn ${pathname.includes(path.to) ? 'active' : ''}`}
+                                        >
+                                            {path.icon}
+                                            {path.name}
+                                        </Link>
                                     ))
                                 }
                             </div>
